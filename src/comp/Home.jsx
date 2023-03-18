@@ -1,7 +1,8 @@
 import {useContext} from 'react'
 import { useQuery } from '@tanstack/react-query'
- import { AppContext } from '../App'
- import  Axios from 'axios'
+import { AppContext } from '../App'
+import  Axios from 'axios'
+
 export default function Home() {
     const {count} = useContext(AppContext)
     const {data:catData,isLoading,isError,refetch}=useQuery(['cat'],()=>{
